@@ -1,18 +1,18 @@
-# delphix::config
+# delphix::targethost
 #
 # A description of what this class does
 #
 # @summary A short summary of the purpose of this class
 #
 # @example
-#   include delphix::config
-class delphix::config {
-  $delphix_user     = $::delphix::delphix_user
-  $delphix_group    = $::delphix::delphix_group
-  $delphix_mount    = $::delphix::delphix_mount
-  $delphix_toolkit  = $::delphix::delphix_toolkit
-  $delphix_ssh_user = $::delphix::delphix_ssh_user
-  $delphix_ssh_key  = $::delphix::delphix_ssh_key
+#   include delphix::targethost
+class delphix::targethost {
+  $delphix_user     = $::delphix::target_user
+  $delphix_group    = $::delphix::target_group
+  $delphix_mount    = $::delphix::target_mount
+  $delphix_toolkit  = $::delphix::target_toolkit
+  $delphix_ssh_user = $::delphix::target_ssh_user
+  $delphix_ssh_key  = $::delphix::target_ssh_key
 
   group { 'add-delphix-group':
     ensure => present,

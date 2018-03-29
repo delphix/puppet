@@ -7,10 +7,10 @@
 # @example
 #   include delphix::params
 class delphix::params {
-  $delphix_user = 'delphix'
-  $delphix_group  =  'delphix'
-  $delphix_mount  =  "/mnt/${delphix_user}"
-  $delphix_toolkit  =  "/home/${delphix_user}/toolkit"
-  $delphix_ssh_user = ''
-  $delphix_ssh_key  = ''
+  $target_user = 'delphix'
+  $target_group  =  'delphix'
+  $target_mount  =  "/mnt/${target_user}"
+  $target_toolkit  =  "/home/${target_user}/toolkit"
+  $target_ssh_user = ''
+  $target_ssh_key  = ''
 }

@@ -3,18 +3,18 @@
 # A description of what this class does
 #
 # @summary A short summary of the purpose of this class
-#
+#r
 # @example
 #   include delphix
 class delphix (
-  String  $delphix_user = $::delphix::params::delphix_user,
-  String  $delphix_group = $::delphix::params::delphix_group,
-  String  $delphix_mount = $::delphix::params::delphix_mount,
-  String  $delphix_toolkit = $::delphix::params::delphix_toolkit,
-  String  $delphix_ssh_user = $::delphix::params::delphix_ssh_user,
-  String  $delphix_ssh_key = $::delphix::params::delphix_ssh_key
+  String  $target_user = $::delphix::params::target_user,
+  String  $target_group = $::delphix::params::target_group,
+  String  $target_mount = $::delphix::params::target_mount,
+  String  $target_toolkit = $::delphix::params::target_toolkit,
+  String  $target_ssh_user = $::delphix::params::target_ssh_user,
+  String  $target_ssh_key = $::delphix::params::target_ssh_key
 ) inherits ::delphix::params {
 
-  contain '::delphix::config'
+  contain '::delphix::targethost'
 
 }
