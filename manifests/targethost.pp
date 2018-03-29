@@ -14,6 +14,24 @@ class delphix::targethost {
   $delphix_ssh_user = $::delphix::target_ssh_user
   $delphix_ssh_key  = $::delphix::target_ssh_key
 
+  case $::osfamily {
+    'redhat': {
+      package { 'nfs-utils': ensure => 'installed' }
+    }
+    'debian': {
+      exec { 'enable-32-bit-architecture':
+        command => 'dpkg --add-architecture i386',
+        path    => ['/usr/bin', '/usr/sbin', '/bin'],
+        onlyif  => 'dpkg --print-foreign-architectures | grep -c i386'
+      }
+      $packages = ['libc6:i386','libstdc++6:i386','nfs-common','sudo']
+      package { $packages: ensure => 'installed' }
+    }
+    default: {
+      # ...
+    }
+  }
+
   group { 'add-delphix-group':
     ensure => present,
     name   => $delphix_group
