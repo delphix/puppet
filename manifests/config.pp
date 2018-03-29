@@ -62,11 +62,13 @@ class delphix::config {
     mode   => '0600'
   }
 
-  ssh_authorized_key { 'ssh-user-key':
-    ensure => present,
-    user   => $delphix_ssh_user,
-    type   => 'ssh-rsa',
-    key    => $delphix_ssh_key
+  if ($delphix_ssh_user != '') and ($delphix_ssh_key != '') {
+    ssh_authorized_key { 'ssh-user-key':
+      ensure => present,
+      user   => $delphix_ssh_user,
+      type   => 'ssh-rsa',
+      key    => $delphix_ssh_key
+    }
   }
 
   exec { 'configure-delphix-user-for-sudo-tty':
