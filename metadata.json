@@ -2,9 +2,10 @@
   "name": "delphix-delphix",
   "version": "0.1.0",
   "author": "Derek Smart",
-  "summary": "",
+  "summary": "Puppet Module for configuring target hosts for use by the Delphix platform",
   "license": "Apache-2.0",
-  "source": "",
+  "source": "https://github.com/delphix/puppet",
+  "issues_url": "https://github.com/delphix/puppet/issues",
   "dependencies": [
 
   ],
@@ -16,19 +17,7 @@
       ]
     },
     {
-      "operatingsystem": "OracleLinux",
-      "operatingsystemrelease": [
-        "7"
-      ]
-    },
-    {
       "operatingsystem": "RedHat",
-      "operatingsystemrelease": [
-        "7"
-      ]
-    },
-    {
-      "operatingsystem": "Scientific",
       "operatingsystemrelease": [
         "7"
       ]

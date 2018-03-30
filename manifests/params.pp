@@ -1,8 +1,8 @@
 # delphix::params
 #
-# A description of what this class does
+# Parameter definition for the Delphix module
 #
-# @summary A short summary of the purpose of this class
+# Copyright (c) 2018 by Delphix. All rights reserved.
 #
 # @example
 #   include delphix::params

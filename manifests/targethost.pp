@@ -1,8 +1,13 @@
 # delphix::targethost
 #
-# A description of what this class does
+# Configures a linux system to be a target host.
 #
-# @summary A short summary of the purpose of this class
+# Copyright (c) 2018 by Delphix. All rights reserved.
+#
+# @summary
+# Creates a new user and group
+# Creates proper directories and sets ownership and permissions
+# Enables sudo access for new user
 #
 # @example
 #   include delphix::targethost

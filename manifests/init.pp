@@ -1,9 +1,12 @@
-# delphix
+# Delphix
 #
-# A description of what this class does
+# Configure a Linux system for use as a target host in the Delphix platform.
 #
-# @summary A short summary of the purpose of this class
-#r
+# Copyright (c) 2018 by Delphix. All rights reserved.
+#
+# @summary
+# Configures a target host by default.
+#
 # @example
 #   include delphix
 class delphix (
