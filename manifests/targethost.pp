@@ -52,7 +52,7 @@ class delphix::targethost {
   user { 'add-delphix-user':
     name       => $delphix_user,
     managehome => true,
-    home       => '/home/delphix',
+    home       => "/home/${delphix_user}",
     groups     => $delphix_group,
     comment    => 'Delphix Automation'
   }
@@ -95,15 +95,15 @@ class delphix::targethost {
   }
 
   exec { 'configure-delphix-user-for-sudo-tty':
-    command => "sudo echo 'Defaults:delphix_user !requiretty' >> /etc/sudoers",
+    command => "sudo echo 'Defaults:${delphix_user} !requiretty' >> /etc/sudoers",
     path    => ['/usr/bin', '/usr/sbin', '/bin'],
-    onlyif  => "sudo grep -c 'Defaults:delphix_user !requiretty' /etc/sudoers"
+    onlyif  => "sudo grep -c 'Defaults:${delphix_user} !requiretty' /etc/sudoers"
   }
 
   exec { 'configure-delphix-user-for-sudoers':
-    command => "sudo echo 'delphix_user ALL=NOPASSWD: /bin/mount, /bin/umount, /bin/ps, /bin/mkdir, /bin/rmdir' >> /etc/sudoers",
+    command => "sudo echo '${delphix_user} ALL=NOPASSWD: /bin/mount, /bin/umount, /bin/ps, /bin/mkdir, /bin/rmdir' >> /etc/sudoers",
     path    => ['/usr/bin', '/usr/sbin', '/bin'],
-    onlyif  => "sudo grep -c 'delphix_user ALL=NOPASSWD: /bin/mount, /bin/umount, /bin/ps, /bin/mkdir, /bin/rmdir' /etc/sudoers"
+    onlyif  => "sudo grep -c '${delphix_user} ALL=NOPASSWD: /bin/mount, /bin/umount, /bin/ps, /bin/mkdir, /bin/rmdir' /etc/sudoers"
   }
 
   exec { 'validate-etc-sudoers':

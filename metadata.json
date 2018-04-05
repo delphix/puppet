@@ -1,6 +1,6 @@
 {
   "name": "delphix-delphix",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Derek Smart",
   "summary": "Puppet Module for configuring target hosts for use by the Delphix platform",
   "license": "Apache-2.0",
