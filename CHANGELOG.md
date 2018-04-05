@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## Release 0.1.1
+
+Fixes a bug where username was still hard coded to `delphix`.
+
 ## Release 0.1.0
 
 **Features**
