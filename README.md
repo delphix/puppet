@@ -1,5 +1,6 @@
 # Delphix Target Host
 
+[![Build Status](https://travis-ci.org/delphix/puppet.svg?branch=master)](https://travis-ci.org/delphix/puppet)
 [![Puppet Forge](https://img.shields.io/puppetforge/v/delphix/delphix.svg)](https://forge.puppet.com/delphix/delphix)
 [![Puppet Forge](https://img.shields.io/puppetforge/dt/delphix/delphix.svg)](https://forge.puppet.com/delphix/delphix)
 
