@@ -11,13 +11,14 @@
 #
 # @example
 #   include delphix::targethost
-class delphix::targethost {
-  $delphix_user     = $::delphix::target_user
-  $delphix_group    = $::delphix::target_group
-  $delphix_mount    = $::delphix::target_mount
-  $delphix_toolkit  = $::delphix::target_toolkit
-  $delphix_ssh_user = $::delphix::target_ssh_user
-  $delphix_ssh_key  = $::delphix::target_ssh_key
+class delphix::targethost (
+    $delphix_user     = $::delphix::target_user,
+    $delphix_group    = $::delphix::target_group,
+    $delphix_mount    = $::delphix::target_mount,
+    $delphix_toolkit  = $::delphix::target_toolkit,
+    $delphix_ssh_user = $::delphix::target_ssh_user,
+    $delphix_ssh_key  = $::delphix::target_ssh_key,
+  ){
 
   case $::osfamily {
     'redhat': {
